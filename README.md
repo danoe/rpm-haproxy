@@ -23,6 +23,18 @@ Perform the following steps on a build box as a regular user.
     
 Resulting RPM will be in /opt/rpm-haproxy/rpmbuild/RPMS/x86_64/
 
+## Build using Docker
+Except for Docker and docker-compose there are no other install requirements
+
+    mkdir -p ~/repos
+    cd ~/repos
+    git clone https://github.com/DBezemer/rpm-haproxy.git 
+    cd ./rpm-haproxy
+    git checkout 2.0
+    docker-compose up
+    
+Resulting RPM will be in your current directory ./rpmbuild/RPMS/x86_64/
+
 ## Credits
 
 Based on the Red Hat 6.4 RPM spec for haproxy 1.4 combined with work done by 
